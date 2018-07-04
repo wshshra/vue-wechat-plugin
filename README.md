@@ -30,7 +30,7 @@ let router = new Router({
       name: 'Hello',
       meta: {
         wechatAuth: true // 如果此路由需要微信授权请设置为true,默认为false
-      }
+      },
     }
   ]
 })
@@ -41,9 +41,9 @@ Vue.use(VueRouter)
 Vue.use(wechatPlugin , {
   router, // 路由实例对象
   appid: '', // 您的微信appid
-  responseType: 'code',  // 返回类型，请填写code
+  responseType: 'code', // 返回类型，请填写code
   scope: 'snsapi_userinfo', // 应用授权作用域，snsapi_base （不弹出授权页面，直接跳转，只能获取用户openid），snsapi_userinfo （弹出授权页面，可通过openid拿到昵称、性别、所在地。并且，即使在未关注的情况下，只要用户授权，也能获取其信息）
-  redirectUri: 'https://test.com/',  //微信回调地址
+  redirectUri: 'https://test.com/', //微信回调地址
   getCodeCallback (next, code) {
     // 用户同意授权后回调方法
     // code：用户同意授权后，获得code值
@@ -56,19 +56,19 @@ Vue.use(wechatPlugin , {
       params: {
         code,
         state: ''
-      }
+      },
     }).then(response => {
       let data = response.data
       let result = data.result; //后端返回的获取accessToken成功或失败，布尔型
       if (result) {
-        next('', code) // 获取access_toeken成功
+        next('', code); // 获取access_toeken成功
       } else {
-        next('/login') // 获取access_token失败
+        next('/login'); // 获取access_token失败
       }
     }).catch(() => {
-      next('/login') // ajax出现错误
+      next('/login'); // ajax出现错误
     })
-  }
+  },
 })
 
 new Vue({
