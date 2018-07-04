@@ -1,6 +1,6 @@
 {
   "name": "vue-wechat-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vue微信公众号授权插件",
   "main": "index.js",
   "scripts": {
