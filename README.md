@@ -78,6 +78,16 @@ new Vue({
 })
 ```
 
+# 参数说明
+|     参数名      |   类型   | 必填 |    默认值     | 说明                                                         |
+| :---: | :---: | :--: | :---: | :--- |
+|     router      |   obj    |  是  |      无       | vue-router路由实例                                           |
+|      appid      |  string  |  是  |      ''       | 微信appid                                                    |
+|  responseType   |  string  |  是  |    'code'     | 微信的responsetype                                           |
+|      scope      |  string  |  是  | 'snsapi_base' | 授权作用域<br />snsapi_base(只能获取基础信息)，<br /> snsapi_userinfo(弹出授权获取信息，可以获取更多信息) |
+|   redirectUri   |  string  |  是  |      ''       | 微信回调地址                                                 |
+| getCodeCallback | function |  是  |      {}       | 回调函数                                                     |
+
 # 授权流程
 ```
 graph TD

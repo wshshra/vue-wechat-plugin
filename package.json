@@ -1,6 +1,6 @@
 {
   "name": "vue-wechat-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "vue微信公众号授权插件",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wshshra/vue-wechat-plugin.git"
+    "url": "https://github.com/wshshra/vue-wechat-plugin.git"
   },
   "keywords": [
     "vue-wechat-plugin",
@@ -21,5 +21,5 @@
   "bugs": {
     "url": "https://github.com/wshshra/vue-wechat-plugin/issues"
   },
-  "homepage": "https://github.com/wshshra/vue-wechat-plugin#readme"
+  "homepage": "https://github.com/wshshra/vue-wechat-plugin"
 }
